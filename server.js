@@ -4,6 +4,8 @@ import cors from 'cors';
 import colors from 'colors';
 import connectDB from './config/dbConfig.js';
 import authRoutes from './routes/authRoutes.js';
+import userRoutes from './routes/userRoutes.js';
+
 // import userRoutes from './routes/userRoutes.js'; // Uncomment if needed
 
 dotenv.config();
@@ -21,6 +23,8 @@ app.use('/uploads', express.static('uploads'));
 
 // Routes
 app.use('/api/auth', authRoutes);
+app.use('/api/users', userRoutes);
+
 // app.use('/api/users', userRoutes); // Uncomment when user routes are ready
 
 // Server
